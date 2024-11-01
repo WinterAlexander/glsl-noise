@@ -16,7 +16,7 @@ This repository contains GLSL source code for Perlin noise in 2D, 3D and 4D, bot
 
 The simplex noise functions follow Ken Perlin's original idea, more clearly explained in Stefan Gustavson's paper "Simplex noise demystified" http://www.itn.liu.se/~stegu/simplexnoise/simplexnoise.pdf but without using any uniform arrays or texture lookups.
 
-A scientific paper about this was accepted for publication in JGT, (Journal of Graphics Tools), and after a long delay it finally appeared in print in June 2012: http://dx.doi.org/10.1080/2151237X.2012.649621. You are also welcome to read our preprint on http://www.itn.liu.se/~stegu/jgt2012/, which is not locked up behind a paywall.
+A scientific paper about this was accepted for publication in JGT, (Journal of Graphics Tools), and after a long delay it finally appeared in print in June 2012: http://dx.doi.org/10.1080/2151237X.2012.649621. You are also welcome to read our preprint on http://www.itn.liu.se/~stegu76/jgt2012/, which is not locked up behind a paywall.
 
 You can of course use the functions without reading any part of the article. They require no setup or external data, just the GLSL source provided here, and they should work on any current OpenGL platform, including OpenGL 2.1, OpenGL 3.x and 4.x, OpenGL ES 2.x and WebGL 1.0. They will also work in limited vertex shader environments where texture lookup is not available. In WebGL and OpenGL ES, you will need to use high precision (`precision highp float`) for any of the functions to work.
 
