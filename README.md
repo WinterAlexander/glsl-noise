@@ -14,9 +14,9 @@ This repository contains GLSL source code for Perlin noise in 2D, 3D and 4D, bot
 * Cellular ("Worley") noise functions are (C) Stefan Gustavson
 * The "psrdnoise" functions are (C) Stefan Gustavson
 
-The simplex noise functions follow Ken Perlin's original idea, more clearly explained in Stefan Gustavson's paper "Simplex noise demystified" http://www.itn.liu.se/~stegu/simplexnoise/simplexnoise.pdf but without using any uniform arrays or texture lookups.
+The simplex noise functions follow Ken Perlin's original idea, more clearly explained in Stefan Gustavson's paper "Simplex noise demystified" https://itn-web.it.liu.se/~stegu76/simplexnoise/simplexnoise.pdf but without using any uniform arrays or texture lookups.
 
-A scientific paper about this was accepted for publication in JGT, (Journal of Graphics Tools), and after a long delay it finally appeared in print in June 2012: http://dx.doi.org/10.1080/2151237X.2012.649621. You are also welcome to read our preprint on http://www.itn.liu.se/~stegu76/jgt2012/, which is not locked up behind a paywall.
+A scientific paper about this was accepted for publication in JGT, (Journal of Graphics Tools), and after a long delay it finally appeared in print in June 2012: http://dx.doi.org/10.1080/2151237X.2012.649621. You are also welcome to read our preprint on https://itn-web.it.liu.se/~stegu76/jgt2012/, which is not locked up behind a paywall.
 
 You can of course use the functions without reading any part of the article. They require no setup or external data, just the GLSL source provided here, and they should work on any current OpenGL platform, including OpenGL 2.1, OpenGL 3.x and 4.x, OpenGL ES 2.x and WebGL 1.0. They will also work in limited vertex shader environments where texture lookup is not available. In WebGL and OpenGL ES, you will need to use high precision (`precision highp float`) for any of the functions to work.
 
@@ -55,11 +55,11 @@ All classic and simplex noise functions above return a single float. For the equ
 
 # Other noise implementations
 
-The motivation for these functions not using any textures or arrays is ease of use, self-sufficiency and scalability for massively parallel execution. Noise is seldom used by itself, and these functions can make use of the often untapped ALU resources when run concurrently with traditional texture-intensive real time rendering tasks. However, if you are generating noise by itself and using a lot of it, the texture-intensive noise implementations this work was based on are still up to twice as fast on current generation desktop GPU hardware with lots of texture units and smart texture caching. You can find the original release of the old noise code on http://www.itn.liu.se/~stegu/simplexnoise/GLSL-noise.zip (Windows binary, Windows-dependent source code using legacy OpenGL). A cross platform benchmark comparing it to this new version is on http://www.itn.liu.se/~stegu/simplexnoise/GLSL-noise-vs-noise.zip. For the convenience of Windows users, a version with a precompiled Windows binary is in http://www.itn.liu.se/~stegu/simplexnoise/GLSL-noise-vs-noise-Win32.zip. Note that the demo is more than a decade old and uses long deprecated OpenGL functions on the CPU side. The GPU code is still useful, though.
+The motivation for these functions not using any textures or arrays is ease of use, self-sufficiency and scalability for massively parallel execution. Noise is seldom used by itself, and these functions can make use of the often untapped ALU resources when run concurrently with traditional texture-intensive real time rendering tasks. However, if you are generating noise by itself and using a lot of it, the texture-intensive noise implementations this work was based on are still up to twice as fast on current generation desktop GPU hardware with lots of texture units and smart texture caching. You can find the original release of the old noise code on https://itn-web.it.liu.se/~stegu76/simplexnoise/GLSL-noise.zip (Windows binary, Windows-dependent source code using legacy OpenGL). A cross platform benchmark comparing it to this new version is on https://itn-web.it.liu.se/~stegu76/simplexnoise/GLSL-noise-vs-noise.zip. For the convenience of Windows users, a version with a precompiled Windows binary is in https://itn-web.it.liu.se/~stegu76/simplexnoise/GLSL-noise-vs-noise-Win32.zip. Note that the demo is more than a decade old and uses long deprecated OpenGL functions on the CPU side. The GPU code is still useful, though.
 
 # Cellular (Worley) noise in GLSL
 
-A few GLSL 1.20 compatible implementations of cellular noise ("Worley noise") are available in this repository, and also on http://www.itn.liu.se/~stegu/GLSL-cellular/. It is a straightforward but non-trivial implementation of previous ideas from software procedural shading, using the ideas for pseudo-random permutation from the computational Perlin noise originally presented here, with some optional shortcuts for situations where speed is more important than accuracy.
+A few GLSL 1.20 compatible implementations of cellular noise ("Worley noise") are available in this repository, and also on https://itn-web.it.liu.se/~stegu76/GLSL-cellular/. It is a straightforward but non-trivial implementation of previous ideas from software procedural shading, using the ideas for pseudo-random permutation from the computational Perlin noise originally presented here, with some optional shortcuts for situations where speed is more important than accuracy.
 
 # Tiling 2-D simplex noise with analytic derivatives and rotating gradients
 
@@ -89,7 +89,7 @@ This version has a different, slightly stretched simplex grid which permits tili
 
 "Flow noise" is a neat trick for 2-D noise, where you rotate the gradients at the grid points and displace later terms in a fractal sum by the accumulated gradients of previous terms. It's a cheat with no strong connection to physics, but it can create a visual impression of turbulent flow. The functions in "psrdnoise" can be used to create flow noise.
 
-Another, earlier GLSL 1.20 compatible implementation of "flow noise" using the original, non-tiling simplex grid is available as part of this demo: http://www.itn.liu.se/~stegu/gpunoise/. It's undocumented, but the example and the original Siggraph publication below should be enough to use it:
+Another, earlier GLSL 1.20 compatible implementation of "flow noise" using the original, non-tiling simplex grid is available as part of this demo: https://itn-web.it.liu.se/~stegu76/gpunoise/. It's undocumented, but the example and the original Siggraph publication below should be enough to use it:
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.141.5266&rep=rep1&type=pdf
 
 # Demos and Applications of webgl-noise
