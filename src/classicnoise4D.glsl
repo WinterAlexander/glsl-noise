@@ -1,7 +1,7 @@
 //
 // GLSL textureless classic 4D noise "cnoise",
 // with an RSL-style periodic variant "pnoise".
-// Author:  Stefan Gustavson (stefan.gustavson@liu.se)
+// Author:  Stefan Gustavson (stefan.gustavson@gmail.com)
 // Version: 20241-11-07
 //
 // Many thanks to Ian McEwan of Ashima Arts for the
