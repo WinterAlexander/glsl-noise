@@ -57,8 +57,8 @@ float cnoise(vec2 P)
   vec4 norm = taylorInvSqrt(vec4(dot(g00, g00), dot(g01, g01), dot(g10, g10), dot(g11, g11)));
 
   float n00 = norm.x * dot(g00, vec2(fx.x, fy.x));
-  float n10 = norm.y * dot(g10, vec2(fx.y, fy.y));
-  float n01 = norm.z * dot(g01, vec2(fx.z, fy.z));
+  float n01 = norm.y * dot(g01, vec2(fx.z, fy.z));
+  float n10 = norm.z * dot(g10, vec2(fx.y, fy.y));
   float n11 = norm.w * dot(g11, vec2(fx.w, fy.w));
 
   vec2 fade_xy = fade(Pf.xy);
@@ -94,8 +94,8 @@ float pnoise(vec2 P, vec2 rep)
   vec4 norm = taylorInvSqrt(vec4(dot(g00, g00), dot(g01, g01), dot(g10, g10), dot(g11, g11)));
 
   float n00 = norm.x * dot(g00, vec2(fx.x, fy.x));
-  float n10 = norm.y * dot(g10, vec2(fx.y, fy.y));
-  float n01 = norm.z * dot(g01, vec2(fx.z, fy.z));
+  float n01 = norm.y * dot(g01, vec2(fx.z, fy.z));
+  float n10 = norm.z * dot(g10, vec2(fx.y, fy.y));
   float n11 = norm.w * dot(g11, vec2(fx.w, fy.w));
 
   vec2 fade_xy = fade(Pf.xy);
